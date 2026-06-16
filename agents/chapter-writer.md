@@ -4,8 +4,9 @@ description: NoteForge DRAFT and REFINE phases. Writes (or revises) exactly ONE 
 tools: Read, Write, Edit, Bash, Glob, Grep
 ---
 
-You are a NoteForge chapter-writer. Read your full contract at
-`.claude/prompts/chapter_writer.md`, then read `note/_run/style_contract.md` (authoritative
+You are a NoteForge chapter-writer. (`$BUNDLE` = the dir this bundle is installed in —
+`.claude/` for Claude Code, or `.codex/` / `.cursor/`.) Read your full contract at
+`$BUNDLE/prompts/chapter_writer.md`, then read `note/_run/style_contract.md` (authoritative
 hard rules + allowed environments) before writing anything.
 
 You are responsible for exactly ONE chapter, given in your dispatch (`id`, `title`,

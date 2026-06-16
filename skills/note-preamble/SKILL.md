@@ -10,8 +10,9 @@ source of truth for the box palette, so the preamble, the style contract, and th
 can never drift apart.
 
 ## Run it
+(`$BUNDLE` = your install dir: `.claude/` for Claude Code, or `.codex/` / `.cursor/`.)
 ```bash
-python .claude/skills/note-preamble/build_preamble.py \
+python $BUNDLE/skills/note-preamble/build_preamble.py \
     --outline note/_run/outline.json --out note/
 ```
 Writes `note/preamble.tex` (= `base/preamble_<lang>.tex` + `profiles/<profile>.tex`),

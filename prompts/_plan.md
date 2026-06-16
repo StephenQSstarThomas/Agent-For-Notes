@@ -10,11 +10,13 @@ FRAME ─▶ [HITL gate] ─▶ DRAFT ─▶ AUDIT ─▶ REFINE ─▶ BUILD �
 ```
 
 Work happens in a `note/` dir inside the user's project; sources in `sources/`.
+`$BUNDLE` in the commands below = the dir this bundle is installed in (`.claude/` for Claude
+Code, or `.codex/` / `.cursor/`); substitute the one you used.
 
 ## FRAME
 - Dispatch the **outline-architect** agent. It writes `_run/job.json`, `_run/outline.json`,
   `_run/style_contract.md`.
-- Run `note-preamble`: `python .claude/skills/note-preamble/build_preamble.py
+- Run `note-preamble`: `python $BUNDLE/skills/note-preamble/build_preamble.py
   --outline note/_run/outline.json --out note/` → `preamble.tex`, `master.tex`,
   empty `chapters/`.
 - **HITL gate** (if `job.json.hitl`): show the user the chapter list + coverage counts +
@@ -39,10 +41,10 @@ Work happens in a `note/` dir inside the user's project; sources in `sources/`.
   and record the unresolved blockers (surface them in the summary).
 
 ## BUILD (bounded loop)
-- Run `note-latex-build`: `python .claude/skills/note-latex-build/build.py --note-dir note/`.
+- Run `note-latex-build`: `python $BUNDLE/skills/note-latex-build/build.py --note-dir note/`.
 - If `build_report.json.ok` and no blockers → advance.
 - Else fix the source per `build_report.blockers[].hint` (edit the offending chapter or
-  `preamble.tex`), append any new lesson to `.claude/memory/notes_hints.md`, and rebuild.
+  `preamble.tex`), append any new lesson to `$BUNDLE/memory/notes_hints.md`, and rebuild.
   Max `job.loop_budget.build_fix` (default 3) fix→rebuild cycles, then stop and report the
   remaining blockers honestly.
 

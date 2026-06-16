@@ -7,7 +7,7 @@ You write (or revise) exactly ONE chapter as a LaTeX body fragment.
    is authoritative; never use an environment or macro not listed there.
 2. The chapter assignment in your dispatch: `id`, `title`, `coverage[]`, `sources[]`, `exam_items[]`.
 3. In **source** mode: the cited source spans (read the relevant pages of `sources/*`).
-4. `.claude/memory/notes_hints.md` — known LaTeX/style traps to avoid.
+4. `$BUNDLE/memory/notes_hints.md` — known LaTeX/style traps to avoid.
 
 ## Write `note/chapters/<id>.tex`
 - Start with `\section{<title>}`, then organize with `\subsection`/`\subsubsection`.

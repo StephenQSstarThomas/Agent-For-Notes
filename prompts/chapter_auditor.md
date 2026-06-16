@@ -35,4 +35,4 @@ enough that a writer can apply them without re-deriving the audit.
 
 ## Memory
 If you find a recurring LaTeX/style trap likely to bite other chapters, note it so the
-orchestrator can append it to `.claude/memory/notes_hints.md`.
+orchestrator can append it to `$BUNDLE/memory/notes_hints.md`.

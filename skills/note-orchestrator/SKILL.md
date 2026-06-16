@@ -17,11 +17,14 @@ source material. Mirrors the proven `astro_review` fan-out-with-audit workflow.
 **Not** for: editing one existing `.tex` by hand, or a single short answer (just answer).
 
 ## How to run
-Follow `.claude/prompts/_plan.md` exactly — it is the authoritative state machine. In short:
+> **`$BUNDLE`** = the folder this bundle is installed in — `.claude/` for Claude Code, or
+> `.codex/` / `.cursor/` if you copied it there. Substitute it in every path/command below.
+
+Follow `$BUNDLE/prompts/_plan.md` exactly — it is the authoritative state machine. In short:
 
 1. **FRAME** — dispatch the `outline-architect` agent (writes `_run/job.json`,
    `_run/outline.json`, `_run/style_contract.md`), then run note-preamble:
-   `python .claude/skills/note-preamble/build_preamble.py --outline note/_run/outline.json --out note/`.
+   `python $BUNDLE/skills/note-preamble/build_preamble.py --outline note/_run/outline.json --out note/`.
 2. **HITL gate** — if `job.json.hitl`, show the user the chapter list + coverage counts +
    allowed environments; let them edit before fan-out. Re-run note-preamble if changed.
 3. **DRAFT** — dispatch one `chapter-writer` per chapter **in parallel** (all Agent calls in
@@ -50,5 +53,5 @@ Follow `.claude/prompts/_plan.md` exactly — it is the authoritative state mach
 - Inventing data in source mode — every fact traces to `sources/`; the auditor enforces this.
 
 ## Memory
-Consult and append `.claude/memory/notes_hints.md` with recurring LaTeX/style fixes so later
+Consult and append `$BUNDLE/memory/notes_hints.md` with recurring LaTeX/style fixes so later
 runs avoid them.

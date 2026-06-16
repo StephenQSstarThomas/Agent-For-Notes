@@ -9,8 +9,9 @@ Closes a run with two artifacts: a deterministic coverage report and a narrative
 summary.
 
 ## Run it
+(`$BUNDLE` = your install dir: `.claude/` for Claude Code, or `.codex/` / `.cursor/`.)
 ```bash
-python .claude/skills/note-summary/summarize.py --note-dir note/
+python $BUNDLE/skills/note-summary/summarize.py --note-dir note/
 ```
 Writes `note/coverage_report.md`: per-chapter item count, heuristic covered/total, audit
 verdict, line count, an overall coverage %, and a list of outline items not literally found

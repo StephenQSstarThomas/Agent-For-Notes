@@ -9,8 +9,9 @@ Compile + triage. It compiles and reports; it does NOT edit `.tex` — the calli
 the report and fixes the source, then re-runs.
 
 ## Run it
+(`$BUNDLE` = your install dir: `.claude/` for Claude Code, or `.codex/` / `.cursor/`.)
 ```bash
-python .claude/skills/note-latex-build/build.py --note-dir note/
+python $BUNDLE/skills/note-latex-build/build.py --note-dir note/
 ```
 Compiles `note/master.tex` with `tectonic`, writes `note/_run/build_report.json`, prints a
 PASS/blockers summary. Exit 0 if a PDF was produced, 1 if compile failed.
@@ -30,7 +31,7 @@ with `kind`, `match`, and a `hint` telling you where to look), and `log_tail`.
 
 ## Loop
 Fix → rerun, bounded by `job.loop_budget.build_fix` (default 3). Append any new lesson to
-`.claude/memory/notes_hints.md`. If blockers remain at the cap, stop and report them honestly
+`$BUNDLE/memory/notes_hints.md`. If blockers remain at the cap, stop and report them honestly
 — do not claim success.
 
 ## Common mistakes

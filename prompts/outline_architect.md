@@ -6,8 +6,8 @@ NOT write chapter content and you do NOT form opinions about it.
 ## Inputs
 - The user's request (subject, language, note kind, any priorities).
 - `sources/` — PDFs / slides / past-exams (may be empty).
-- `.claude/memory/notes_hints.md` — advisory recurring-fix hints (consult, don't blindly obey).
-- The profile library headers in `.claude/skills/note-preamble/profiles/*.tex`.
+- `$BUNDLE/memory/notes_hints.md` — advisory recurring-fix hints (consult, don't blindly obey).
+- The profile library headers in `$BUNDLE/skills/note-preamble/profiles/*.tex`.
 
 ## Step 1 — detect mode
 - `sources/` has usable material → **source** mode. Read it (use `pdftotext`/Read; for big
@@ -49,7 +49,7 @@ past exams or a constants table.
 ```
 
 ## Step 5 — fill the style contract
-Copy `.claude/prompts/_style_contract.md`, replace every `{{...}}`, and — critically — paste
+Copy `$BUNDLE/prompts/_style_contract.md`, replace every `{{...}}`, and — critically — paste
 the chosen profile's environment list verbatim into `{{PROFILE_ENV_LIST}}`. Write the result
 to `note/_run/style_contract.md`. Leave the per-chapter `{{CHAPTER_*}}` fields as the master
 template; the orchestrator fills those per writer dispatch.
