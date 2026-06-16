@@ -1,0 +1,17 @@
+# Local-only design docs (kept on disk, not published)
+/docs/
+
+# Per-run output (created when NoteForge runs inside a note project)
+/note/
+/sources/
+
+# LaTeX / tectonic build junk
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+
+# Python
+__pycache__/
+*.pyc

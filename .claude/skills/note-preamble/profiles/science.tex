@@ -1,0 +1,23 @@
+% ============================================================
+%  STYLE PROFILE: science   (STEM exam/review notes — astro_review lineage)
+%  Content boxes added on top of the COMMON set (review/exam/key/note).
+%  ENVIRONMENTS (copy this list into style_contract.md):
+%    conceptbox{term}  — 概念/名词的专业解释（每个 outline 名词一个）
+%    derivebox{title}  — 从普物/第一性原理起步的推导
+%    workedbox{title}  — 例题 / 真题 / 作业精解（含数据代入与单位）
+%    estbox{title}     — 数量级估算
+%    trapbox           — 易错点与常见陷阱（无参数）
+%    focusbox          — 复习/命题要点：本章重点与高频考点（无参数）
+% ============================================================
+\newtcolorbox{conceptbox}[1]{breakable, colback=blue!4!white, colframe=blue!55!black,
+  title=\textbf{概念 · Concept ｜ #1}, sharp corners, boxrule=0.8pt, left=4pt,right=4pt,top=3pt,bottom=3pt}
+\newtcolorbox{derivebox}[1]{breakable, colback=teal!5!white, colframe=teal!60!black,
+  title=\textbf{推导 · Derivation ｜ #1}, sharp corners, boxrule=0.8pt, left=4pt,right=4pt,top=3pt,bottom=3pt}
+\newtcolorbox{workedbox}[1]{breakable, colback=green!5!white, colframe=green!45!black,
+  title=\textbf{例题 · Worked ｜ #1}, sharp corners, boxrule=0.8pt, left=4pt,right=4pt,top=3pt,bottom=3pt}
+\newtcolorbox{estbox}[1]{breakable, colback=orange!6!white, colframe=orange!70!black,
+  title=\textbf{估算 · Estimate ｜ #1}, sharp corners, boxrule=0.8pt, left=4pt,right=4pt,top=3pt,bottom=3pt}
+\newtcolorbox{trapbox}{breakable, colback=red!4!white, colframe=red!60!black,
+  title=\textbf{易错点 · Pitfalls}, sharp corners, boxrule=0.8pt, left=4pt,right=4pt,top=3pt,bottom=3pt}
+\newtcolorbox{focusbox}{breakable, colback=purple!5!white, colframe=purple!60!black,
+  title=\textbf{复习要点 · Exam Focus}, sharp corners, boxrule=0.8pt, left=4pt,right=4pt,top=3pt,bottom=3pt}

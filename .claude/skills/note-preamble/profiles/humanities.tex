@@ -1,0 +1,23 @@
+% ============================================================
+%  STYLE PROFILE: humanities   (philosophy / theory review notes — intro_phil lineage)
+%  Content boxes added on top of the COMMON set (review/exam/key/note).
+%  ENVIRONMENTS (copy this list into style_contract.md):
+%    conceptbox{term}      — 概念/术语的定义与辨析
+%    argumentbox{title}    — 一个论证：前提 → 推理 → 结论
+%    objectionbox{title}   — 反驳 / 异议（及可能的回应）
+%    thinkerbox{name}      — 某思想家的立场、背景与贡献
+%    quotebox{source}      — 关键原典引文 + 释读
+%    distinctionbox{title} — 一组关键区分（如 分析/综合、先天/后天）
+% ============================================================
+\newtcolorbox{conceptbox}[1]{breakable, colback=blue!4!white, colframe=blue!55!black,
+  title=\textbf{概念 · Concept ｜ #1}, sharp corners, boxrule=0.8pt, left=4pt,right=4pt,top=3pt,bottom=3pt}
+\newtcolorbox{argumentbox}[1]{breakable, colback=teal!5!white, colframe=teal!60!black,
+  title=\textbf{论证 · Argument ｜ #1}, sharp corners, boxrule=0.8pt, left=4pt,right=4pt,top=3pt,bottom=3pt}
+\newtcolorbox{objectionbox}[1]{breakable, colback=red!4!white, colframe=red!60!black,
+  title=\textbf{异议 · Objection ｜ #1}, sharp corners, boxrule=0.8pt, left=4pt,right=4pt,top=3pt,bottom=3pt}
+\newtcolorbox{thinkerbox}[1]{breakable, colback=purple!5!white, colframe=purple!60!black,
+  title=\textbf{思想家 · Thinker ｜ #1}, sharp corners, boxrule=0.8pt, left=4pt,right=4pt,top=3pt,bottom=3pt}
+\newtcolorbox{quotebox}[1]{breakable, colback=yellow!8!white, colframe=brown!60!black,
+  title=\textbf{原典 · Quote ｜ #1}, sharp corners, boxrule=0.8pt, left=4pt,right=4pt,top=3pt,bottom=3pt}
+\newtcolorbox{distinctionbox}[1]{breakable, colback=green!5!white, colframe=green!45!black,
+  title=\textbf{区分 · Distinction ｜ #1}, sharp corners, boxrule=0.8pt, left=4pt,right=4pt,top=3pt,bottom=3pt}

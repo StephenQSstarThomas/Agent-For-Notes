@@ -1,0 +1,21 @@
+% ============================================================
+%  STYLE PROFILE: tech   (CS / engineering / textbook notes — Agents-Textbook lineage)
+%  Content boxes added on top of the COMMON set (review/exam/key/note).
+%  ENVIRONMENTS (copy this list into style_contract.md):
+%    defbox{term}    — 术语/概念的精确定义
+%    ideabox         — Key Idea：一句话核心洞见（无参数）
+%    demobox{title}  — 运行示例 / 代码演示 / 工作流
+%    pitfallbox      — 常见陷阱（无参数）
+% ============================================================
+\definecolor{ccblue}{RGB}{0,102,204}
+\definecolor{ccpurple}{RGB}{120,60,160}
+\definecolor{democ}{RGB}{20,120,90}
+\definecolor{ccred}{RGB}{200,40,40}
+\newtcolorbox{defbox}[1]{breakable, colback=ccblue!6, colframe=ccblue!60,
+  title=\textbf{定义 · Definition ｜ #1}, sharp corners, boxrule=0.8pt, left=4pt,right=4pt,top=3pt,bottom=3pt}
+\newtcolorbox{ideabox}{breakable, colback=ccpurple!6, colframe=ccpurple!60,
+  title=\textbf{核心要点 · Key Idea}, sharp corners, boxrule=0.8pt, left=4pt,right=4pt,top=3pt,bottom=3pt}
+\newtcolorbox{demobox}[1]{breakable, colback=democ!6, colframe=democ!70,
+  title=\textbf{演示 · Demo ｜ #1}, sharp corners, boxrule=0.8pt, left=4pt,right=4pt,top=3pt,bottom=3pt}
+\newtcolorbox{pitfallbox}{breakable, colback=ccred!5, colframe=ccred!55,
+  title=\textbf{常见陷阱 · Common Pitfall}, sharp corners, boxrule=0.8pt, left=4pt,right=4pt,top=3pt,bottom=3pt}
